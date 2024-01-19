@@ -11,4 +11,6 @@ public class SteamService {
     public Root getRoot(){
         return rootTemplate.getForObject(URL, Root.class);
     }
+
+    //
 }
