@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{webjars/bootstrap/5.2.3/css/bootstrap.min.css}"/>
+    <title>Steam Games Exercice</title>
+</head>
+<body>
+    <div class="container-fluid bg-dark text-white d-flex justify-content-center">
+        <h2>Steam Spring Exercice</h2>
+    </div>
+    <div class="container-fluid border pt-2 d-flex justify-content-center">
+        <div class="card" style="width:18rem">
+            <div class="card-body">
+                <h5 class="card-title" th:text="${nombre}"></h5>
+                <p class="card-text" th:text="@{${id+' Identificador del juego'}}"> </p>
+                <img class="card-img-top" th:src="@{${'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/' + id + '/' + img_url+'.jpg'}}">
+                <p></p>
+                <a href="#" class="btn btn-primary" onclick="window.location.reload();">Refrescar</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
